@@ -1,0 +1,21 @@
+@back.api_HostAddress = http://localhost:5230
+
+GET {{back.api_HostAddress}}/seed-test-data/
+Accept: application/json
+
+###
+
+GET {{back.api_HostAddress}}/get-provincies/{countryId}
+Accept: application/json
+
+###
+
+GET {{back.api_HostAddress}}/get-countries/
+Accept: application/json
+
+###
+
+POST {{back.api_HostAddress}}/add-new-object/
+Accept: application/json
+
+###

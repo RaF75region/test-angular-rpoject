@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api:
+    image: api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5002:8080"
+
+#  angular:
+#    image: angular
+#    build:
+#      context: ./frontend
+#      dockerfile: Dockerfile
+#    ports:
+#      - "4200:4200"

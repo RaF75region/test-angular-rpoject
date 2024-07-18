@@ -1,0 +1,21 @@
+<div *ngIf="control" class="form-group" [formGroup]="formGroup">
+  <label [for]="id" class="col-sm-2 col-form-label w-100">{{label}}</label>
+  <input
+    [placeholder]="placeholder"
+    [type]="type"
+    [name]="id"
+    [value] = "value"
+    class="form-control"
+    (input)="onInput($event)"
+    [className]="control.invalid?'form-control invalid':'form-control'"
+    [required]="required"
+    [formControlName]="formControlName"
+  />
+  <div *ngIf="helpText" class="help-text">{{helpText}}</div>
+  <div *ngIf="control.valid"  class="valid-feedback-input">
+    {{validText}}
+  </div>
+  <div *ngIf="control.invalid" class="invalid-feedback-input">
+    {{feedback}}
+  </div>
+</div>
